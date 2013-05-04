@@ -1,0 +1,31 @@
+<?php
+global $bindchatOptions;
+if (!isset($bindchatOptions)) {
+$bindchatOptions['enabled'] = Mage::helper('bindchat_livechat')->isEnabled();
+$bindchatOptions['siteId'] = Mage::helper('bindchat_livechat')->getSiteId();
+$bindchatOptions['siteDomain'] = Mage::helper('bindchat_livechat')->getSiteDomain();
+}
+?>
+<?php if($bindchatOptions['enabled']):?>
+<!-- Start of BindChat Live Chat Script -->
+<script>
+  (function (w, d, e, g, r, a, m) {
+      w['BindChatObject'] = r;
+      w[r] = w[r] || function () {
+          (w[r].q = w[r].q || []).push(arguments)
+      }, w[r].t = 1 * new Date();
+      a = d.createElement(e),
+      m = d.getElementsByTagName(e)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.bindchat.com/api/js/all.js', 'bindchat');
+
+  bindchat('create', '<?php echo $this->htmlEscape($bindchatOptions["siteId"])?>', '<?php echo $this->htmlEscape($bindchatOptions["siteDomain"])?>');
+</script>
+<noscript>
+<a href="http://www.bindchat.com/sites/contact/<?php echo $this->htmlEscape($bindchatOptions['siteId'])?>" target="_blank">Feedback?</a> 
+powered by <a href="http://www.bindchat.com/welcome">Bindchat</a>
+</noscript>
+<!-- End of BindChat Live Chat Script -->
+<?php endif;?>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <BindChat_All>
+            <version>1.0</version>
+        </BindChat_All>
+    </modules>
+    <global>
+        <blocks>
+            <bindchatall>
+                <class>BindChat_All_Block</class>
+            </bindchatall>
+        </blocks>
+        <helpers>
+            <bindchatall>
+                <class>BindChat_All_Helper</class>
+            </bindchatall>
+        </helpers>
+    </global>
+</config>

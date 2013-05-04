@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <BindChat_Livechat>
+            <version>1.0</version>
+        </BindChat_Livechat>
+    </modules>
+    <global>
+        <helpers>
+            <bindchat_livechat>
+              <class>BindChat_Livechat_Helper</class>
+            </bindchat_livechat>
+        </helpers>
+    </global>
+    <frontend>
+        <routers>
+            <BindChat_Livechat>
+                <use>standard</use>
+                <args>
+                    <module>BindChat_Livechat</module>
+                    <frontName>bindchat</frontName>
+                </args>
+            </BindChat_Livechat>
+        </routers>
+        <layout>
+            <updates>
+                <BindChat_Livechat>
+                    <file>bindchat_livechat.xml</file>
+                </BindChat_Livechat>
+            </updates>
+        </layout>
+     </frontend>
+</config>

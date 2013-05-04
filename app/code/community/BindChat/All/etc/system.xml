@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <bindchat translate="label" module="bindchatall">
+            <label>
+            BindChat
+            </label>
+            <sort_order>300</sort_order>
+        </bindchat>
+    </tabs>
+    <sections>
+        <bindchatall translate="label">
+            <label>General</label>
+            <tab>bindchat</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>777</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <extensions translate="label">
+                    <label>Installed Extensions</label>
+                    <frontend_type>text</frontend_type>
+                    <frontend_model>bindchatall/extensions</frontend_model>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </extensions>
+            </groups>
+        </bindchatall>
+    </sections>
+</config>

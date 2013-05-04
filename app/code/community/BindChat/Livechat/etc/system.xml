@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <livechat translate="label">
+            <label>Live Chat</label>
+            <tab>bindchat</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <settings translate="label">
+                    <label>Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <comment>
+                    <![CDATA[
+                            <div style="padding:10px;background-color:#fff;border:1px solid #ddd;margin-bottom:7px;">
+                            This module was developed by <a href="http://www.bindchat.com" target="_blank">www.BindChat.com</a>.
+                            For docs & examples refer to the BindChat <a href="http://www.bindchat.com" target="_blank">web site</a>.
+                            </div>
+                    ]]>
+                    </comment>
+                    <expanded>1</expanded>
+                    <fields>
+                        <enabled translate="label comment">
+                            <label>Enable Live Chat On Frontend</label>
+                            <!-- <comment><![CDATA[]]></comment> -->
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <siteid translate="label comment">
+                            <label>Site Id</label>
+                            <comment>
+                              <![CDATA[
+                                <span>
+                                What is it?<br/>
+                                Live chat needs a BindChat Site ID to identify permissions. 
+                                If you have a BindChat account, you can get it from <a href="http://www.bindchat.com/install" target="_blank">Install</a> page on web site, and paste your BindChat Site ID into the Site ID field .
+                                Otherwise you needs to <a href="http://www.bindchat.com/signup" target="_blank">Signup</a> a new account.
+                                </span>
+                              ]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </siteid>
+                        <sitedomain translate="label comment">
+                            <label>Site Domain</label>
+                            <comment>
+                            <![CDATA[
+                              <span>Your Magento site domain.</span>
+                            ]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>12</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </sitedomain>
+                    </fields>
+                </settings>
+            </groups>
+        </livechat>
+    </sections>
+</config>
